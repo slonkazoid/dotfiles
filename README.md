@@ -1,6 +1,6 @@
 # dotfiles
 
-My plaintext config for various stuff.
+Raspberry Pi dotfiles
 
 ### Credits
 
@@ -8,4 +8,3 @@ My plaintext config for various stuff.
     - [GitHub](https://github.com/MentalOutlaw)
 - **Me**
     - [GitLab](https://gitlab.com/alifurkany)
-    - [GitHub](https://github.com/uAliFurkanY)
