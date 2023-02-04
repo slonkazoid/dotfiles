@@ -81,6 +81,7 @@ bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
+floating_modifier $mod normal
 
 # Workspace
 bindsym $mod+1 workspace number 1
@@ -108,6 +109,7 @@ bindsym $mod+Shift+0 move container to workspace number 10
 bindsym $mod+t layout toggle tabbed split
 bindsym $mod+m fullscreen
 bindsym $mod+f floating toggle
+bindsym --whole-window $mod+BTN_MIDDLE floating toggle
 #bindsym $mod+f focus mode_toggle
 #bindsym $mod+a focus parent
 
