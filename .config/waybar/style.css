@@ -48,18 +48,15 @@ window#waybar.empty {
 }
 
 #cpu,
-#memory {
-	padding: 0px 5px 0px 5px;
-}
-
+#memory,
 #network,
-#pulseudio,
-#clock
-{
-	padding: 0px 10px 0px 10px;
+#pulseaudio,
+#custom-mic,
+#clock {
+	padding: 0px 5.5pt 0px 5.5pt;
 }
 
+ 
 #tray {
-
-	margin: 0px 0px 0px 5px;
+	margin: 0px 0px 0px 11pt;
 }

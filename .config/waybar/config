@@ -10,6 +10,7 @@
 		"memory",
 		"network",
 		"pulseaudio",
+		"custom/mic",
 		"clock",
 		"custom/dwm",
 		"tray"
@@ -59,6 +60,15 @@
 		"on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
 		"on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
 		"on-click-middle": "pavucontrol-qt"
+	},
+	"custom/mic": {
+		"format": "{}",
+		"exec": "pactl get-source-mute @DEFAULT_SOURCE@ | sed 's/Mute: //;s/yes//;s/no//'",
+		"exec-if": "sleep 0.1",
+		"exec-on-event": true,
+		"tooltip": false,
+		"interval": 1,
+		"on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
 	},
 	"custom/dwm": {
 		"exec": "dwm -v 2>&1; true",
