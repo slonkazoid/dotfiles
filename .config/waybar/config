@@ -3,6 +3,7 @@
 	"height": 20,
 	"modules-left": [
 		"sway/workspaces",
+		"sway/mode",
 		"sway/window"
 	],
 	"modules-right": [
@@ -18,7 +19,7 @@
 	"sway/workspaces": {
 		"disable-scroll": true,
 		"disable-markup": true,
-		"format": "{index}"
+		"format": "{name}"
 	},
 	"sway/window": {
 		"format": "{}",
