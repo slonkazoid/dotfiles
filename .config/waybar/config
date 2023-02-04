@@ -1,0 +1,68 @@
+{
+	"position": "top",
+	"height": 20,
+	"modules-left": [
+		"sway/workspaces",
+		"sway/window"
+	],
+	"modules-right": [
+		"cpu",
+		"memory",
+		"network",
+		"pulseaudio",
+		"clock",
+		"custom/dwm",
+		"tray"
+	],
+	"sway/workspaces": {
+		"disable-scroll": true,
+		"disable-markup": true,
+		"format": "{index}"
+	},
+	"sway/window": {
+		"format": "{}",
+		"max-length": 150
+	},
+	"cpu": {
+		"format": "󰻠 {usage}%",
+		"interval": 3
+	},
+	"memory": {
+		"format": "󰍛 {percentage}%",
+		"interval": 3
+	},
+	"tray": {
+		"icon-size": 18,
+		"spacing": 5
+	},
+	"clock": {
+		"format": "{:%Y-%m-%d %H:%M:%S}",
+		"interval": 1
+	},
+	"network": {
+		"format-ethernet": "󰈀 Connected",
+		"format-wifi": " Connected",
+		"format-disconnected": "Disconnected",
+		"tooltip-format": "{ifname} {ipaddr}",
+		"interval": 10
+	},
+	"pulseaudio": {
+		"format": "{icon} {volume}%",
+		"format-muted": "婢 Mute",
+		"interval": 1,
+		"format-icons": {
+			"default": [
+				""
+			]
+		},
+		"on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+		"on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+		"on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+		"on-click-middle": "pavucontrol-qt"
+	},
+	"custom/dwm": {
+		"exec": "dwm -v 2>&1; true",
+		"format": "{}",
+		"once": true
+	}
+}
