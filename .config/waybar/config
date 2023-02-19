@@ -27,11 +27,11 @@
 	},
 	"cpu": {
 		"format": "󰻠 {usage}%",
-		"interval": 3
+		"interval": 1
 	},
 	"memory": {
 		"format": "󰍛 {percentage}%",
-		"interval": 3
+		"interval": 1
 	},
 	"tray": {
 		"icon-size": 18,

@@ -17,12 +17,12 @@ notify() {
 case "$1" in
 area)
     area="$(slurp)" &&
-        grim -c -g "$area" "$screenshot_path" && notify
+        grim -g "$area" "$screenshot_path" && notify
     ;;
 
 window)
     area="$(swaymsg -t get_tree | jq -r '.. | select(.pid? and .visible?) | .rect | "\(.x),\(.y) \(.width)x\(.height)"' | slurp)" &&
-        grim -c -g "$area" "$screenshot_path" && notify
+        grim -g "$area" "$screenshot_path" && notify
     ;;
 
 *)

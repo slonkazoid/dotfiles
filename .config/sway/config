@@ -148,12 +148,13 @@ env GDK_BACKEND wayland
 env QT_WAYLAND_DISABLE_WINDOWDECORATION 1
 env QT_QPA_PLATFORMTHEME qt5ct
 env _JAVA_AWT_WM_NONREPARENTING 1
+env XDG_CURRENT_DESKTOP sway
 
 ### Exec stuff
 
 # Service bs
+exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 exec systemctl --user start sway-session.target
-exec /usr/lib/xdg-desktop-portal -r
 exec /usr/lib/polkit-kde-authentication-agent-1
 
 # Autostart
@@ -188,7 +189,8 @@ bindsym Shift+Print exec ~/.local/bin/screenshot.sh window
 
 # Other
 bindsym Mod4+L exec swaylock -f -c 000000
-bindsym Mod1+KP_Add exec dex ~/.local/share/applications/save-replay.desktop && notify-send 'replay saved lol'
+bindsym Mod4+Shift+L exec swaylock -f -c 000000 && systemctl hybrid-sleep
+bindsym Mod1+KP_Add exec ~/.local/share/obs-savereplay/save.sh
 
 
 include /etc/sway/config.d/*
