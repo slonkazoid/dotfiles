@@ -23,7 +23,8 @@
 	},
 	"sway/window": {
 		"format": "{}",
-		"max-length": 150
+		"max-length": 150,
+		"max-height": 20,
 	},
 	"cpu": {
 		"format": "󰻠 {usage}%",
@@ -50,7 +51,7 @@
 	},
 	"pulseaudio": {
 		"format": "{icon} {volume}%",
-		"format-muted": "婢 Mute",
+		"format-muted": "󰝟 Mute",
 		"interval": 1,
 		"format-icons": {
 			"default": [

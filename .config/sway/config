@@ -35,7 +35,7 @@ mode "nag" {
 ### Output configuration
 
 # My monitor is funky, freesync makes it weird
-output DP-1 mode 1920x1080@144Hz adaptive_sync disabled bg ~/Desktop/tales-of-LMC/part\ 1/background.png stretch
+output DP-1 mode 1920x1080@120Hz adaptive_sync disabled bg ~/Desktop/tales-of-LMC/part\ 1/background.png stretch
 
 # Lock screen after 5 minutes
 exec swayidle -w timeout 300 'swaylock -f -c 000000'
@@ -45,13 +45,15 @@ exec swayidle -w timeout 300 'swaylock -f -c 000000'
 input * {
     xkb_layout "tr,us,us"
     xkb_variant ",workman,"
+    accel_profile flat
+    middle_emulation disabled
 }
 input "1133:49298:Logitech_G203_LIGHTSYNC_Gaming_Mouse" {
-    middle_emulation disabled
-    accel_profile flat
     pointer_accel -0.6
 }
-
+input "1133:16418:Logitech_Wireless_Mouse_PID:4022" {
+    pointer_accel 0.1
+}
 ### Key bindings
 
 # Terminal
@@ -149,6 +151,8 @@ env QT_WAYLAND_DISABLE_WINDOWDECORATION 1
 env QT_QPA_PLATFORMTHEME qt5ct
 env _JAVA_AWT_WM_NONREPARENTING 1
 env XDG_CURRENT_DESKTOP sway
+env DESKTOP_SESSION sway
+env XDG_SESSION_DESKTOP sway
 
 ### Exec stuff
 
@@ -158,7 +162,7 @@ exec systemctl --user start sway-session.target
 exec /usr/lib/polkit-kde-authentication-agent-1
 
 # Autostart
-exec dex -ae $DESKTOP_SESSION
+exec dex -ae $DESKTOP_SESSION -s "${XDG_CONFIG_HOME:-$HOME/.config}/autostart"
 # Notifications
 exec swaync
 # Waybar
@@ -167,7 +171,7 @@ exec waybar
 # Something something wine fix
 exec_always xrandr --output $(xrandr | grep -m 1 XWAYLAND | awk '{print $1;}') --primary
 # Apply gtk settings to gsettings
-exec_always import-gsettings
+#exec_always import-gsettings
 
 ### Extra binds
 
@@ -190,7 +194,13 @@ bindsym Shift+Print exec ~/.local/bin/screenshot.sh window
 # Other
 bindsym Mod4+L exec swaylock -f -c 000000
 bindsym Mod4+Shift+L exec swaylock -f -c 000000 && systemctl hybrid-sleep
-bindsym Mod1+KP_Add exec ~/.local/share/obs-savereplay/save.sh
+bindsym --locked Mod4+Shift+L exec systemctl hybrid-sleep
+bindsym Mod1+KP_Enter exec ~/.local/share/obs-savereplay/save.sh
 
+# No keybind mode
+mode "nokeys" {
+	bindsym $mod+Escape mode "default"
+}
+bindsym $mod+Escape mode "nokeys"
 
 include /etc/sway/config.d/*

@@ -1,7 +1,7 @@
 * {
 	border: none;
 	border-radius: 0;
-	font-family: "Hack Nerd Font";
+	font-family: "Hack Nerd Font", "Hack", monospace;
 	font-size: 11pt;
 }
 
@@ -36,6 +36,7 @@ window#waybar {
 	color: #ffffff;
 	background-color: #005577;
 	padding: 0px 10px 0px 10px;
+	font-size: 10pt;
 }
 
 window#waybar.empty #window {
