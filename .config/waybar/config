@@ -37,6 +37,8 @@
 	"battery": {
 		"format": "{icon} {capacity}%",
 		"format-icons": ["󰁻", "󰁽", "󰁿", "󰂁", "󰁹"],
+		"on-scroll-up": "light -A 10",
+		"on-scroll-down": "light -U 10",
 		"interval": 5
 	},
 	"network": {

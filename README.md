@@ -33,6 +33,7 @@ This project requires a patched sway version, you can install my patches with th
 - kvantum
 - kvantum-theme-catppuccin-git
 - libpulse
+- light
 - lxqt-policykit-agent
 - networkmanager
 - notify-send
