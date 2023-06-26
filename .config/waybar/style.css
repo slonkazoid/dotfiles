@@ -50,6 +50,7 @@ window#waybar.empty #window {
 
 #cpu,
 #memory,
+#backlight,
 #battery,
 #network,
 #pulseaudio,
