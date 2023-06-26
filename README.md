@@ -45,6 +45,7 @@ This project requires a patched sway version, you can install my patches with th
 - sway
 - sway-systemd-git
 - swayidle
+- swaylock
 - swaynagmode
 - swaync
 - systemd
