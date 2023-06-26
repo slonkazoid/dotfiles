@@ -1,0 +1,177 @@
+* {
+  font-size: 11pt;
+  font-family: "Hack Nerd Font";
+  transition: none;
+  border-radius: 0;
+}
+
+.floating-notifications.background .notification-row .notification-background {
+  background-color: #1e1e2e;
+  color: #cdd6f4;
+}
+
+.floating-notifications.background .notification-row .notification-background .notification .notification-content .summary {
+  color: #cdd6f4;
+}
+
+.floating-notifications.background .notification-row .notification-background .notification .notification-content .time {
+  color: #a6adc8;
+}
+
+.floating-notifications.background .notification-row .notification-background .notification .notification-content .body {
+  color: #cdd6f4;
+}
+
+.floating-notifications.background .notification-row .notification-background .notification > *:last-child > * .notification-action {
+  color: #cdd6f4;
+  background-color: #313244;
+}
+
+.floating-notifications.background .notification-row .notification-background .notification > *:last-child > * .notification-action:hover {
+  background-color: #313244;
+  color: #cdd6f4;
+}
+
+.floating-notifications.background .notification-row .notification-background .notification > *:last-child > * .notification-action:active {
+  background-color: #74c7ec;
+  color: #cdd6f4;
+}
+
+.floating-notifications.background .notification-row .notification-background .close-button {
+  color: #1e1e2e;
+  background-color: #f38ba8;
+}
+
+.floating-notifications.background .notification-row .notification-background .close-button:hover {
+  background-color: #eba0ac;
+  color: #1e1e2e;
+}
+
+.floating-notifications.background .notification-row .notification-background .close-button:active {
+  background-color: #f38ba8;
+  color: #1e1e2e;
+}
+
+.control-center {
+  background-color: #1e1e2e;
+  color: #cdd6f4;
+}
+
+.control-center .widget-title {
+  color: #cdd6f4;
+}
+
+.control-center .widget-title button {
+  color: #cdd6f4;
+  background-color: #313244;
+}
+
+.control-center .widget-title button:hover {
+  background-color: #585b70;
+  color: #cdd6f4;
+}
+
+.control-center .widget-title button:active {
+  background-color: #74c7ec;
+  color: #1e1e2e;
+}
+
+.control-center .notification-row .notification-background {
+  background-color: #313244;
+}
+
+.control-center .notification-row .notification-background .notification .notification-content .summary {
+  color: #cdd6f4;
+}
+
+.control-center .notification-row .notification-background .notification .notification-content .time {
+  color: #a6adc8;
+}
+
+.control-center .notification-row .notification-background .notification .notification-content .body {
+  color: #cdd6f4;
+}
+
+.control-center .notification-row .notification-background .notification > *:last-child > * .notification-action {
+  color: #cdd6f4;
+  background-color: #11111b;
+}
+
+.control-center .notification-row .notification-background .notification > *:last-child > * .notification-action:hover {
+  background-color: #313244;
+  color: #cdd6f4;
+}
+
+.control-center .notification-row .notification-background .notification > *:last-child > * .notification-action:active {
+  background-color: #74c7ec;
+  color: #cdd6f4;
+}
+
+.control-center .notification-row .notification-background .close-button {
+  color: #1e1e2e;
+  background-color: #eba0ac;
+}
+
+.control-center .notification-row .notification-background .close-button:hover {
+  background-color: #f38ba8;
+  color: #1e1e2e;
+}
+
+.control-center .notification-row .notification-background .close-button:active {
+  background-color: #f38ba8;
+  color: #1e1e2e;
+}
+
+.control-center .notification-row .notification-background:hover {
+  background-color: #7f849c;
+  color: #cdd6f4;
+}
+
+.control-center .notification-row .notification-background:active {
+  background-color: #74c7ec;
+  color: #cdd6f4;
+}
+
+.notification.critical progress {
+  background-color: #f38ba8;
+}
+
+.notification.low progress,
+.notification.normal progress {
+  background-color: #89b4fa;
+}
+
+trough {
+  background-color: #313244;
+}
+
+.control-center trough {
+  background-color: #45475a;
+}
+
+.control-center-dnd {
+  background: #313244;
+  border-color: #45475a;
+}
+
+.control-center-dnd:checked {
+  background: #313244;
+}
+
+.control-center-dnd slider {
+  background: #45475a;
+}
+
+.widget-dnd > switch {
+  background: #313244;
+  border-color: #45475a;
+}
+
+.widget-dnd > switch:checked {
+  background: #313244;
+}
+
+.widget-dnd > switch slider {
+  background: #45475a;
+  border-color: #6c7086;
+}

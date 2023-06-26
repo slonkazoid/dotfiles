@@ -1,0 +1,69 @@
+#!/usr/bin/env bash
+
+# https://github.com/GNOME/gsettings-desktop-schemas/blob/master/schemas/org.gnome.desktop.interface.gschema.xml.in
+# https://lazka.github.io/pgi-docs/GDesktopEnums-3.0/enums.html
+
+ANTIALIASING_ENUM=(none grayscale rgba)
+#HINTING_ENUM=(none slight medium full)
+#RGBA_ENUM=(rgba rgb bgr vrgb vbgr)
+
+setprop() {
+	echo "Set '$1' to '$2'"
+	gsettings set org.gnome.desktop.interface $@
+}
+
+while read -r LINE; do
+	if [[ "$LINE" == "[Settings]" ]]; then continue; fi
+	prop=($(sed 's/=/ /' <<< $LINE))
+	key="${prop[0]}"
+	value="${prop[1]}"
+	case "$key" in
+	gtk-application-prefer-dark-theme)
+		if [[ "$value" == "true" ]]; then
+			setprop color-scheme "prefer-dark"
+		fi
+		;;
+	gtk-theme-name)
+		setprop gtk-theme "$value"
+		;;
+	gtk-icon-theme-name)
+		setprop icon-theme "$value"
+		;;
+	gtk-cursor-theme-name)
+		setprop cursor-theme "$value"
+		;;
+	gtk-enable-animations)
+		setprop enable-animations "$value"
+		;;
+	gtk-font-name)
+		setprop document-font-name "$value"
+		setprop font-name "$value"
+		;;
+	monospace-font-name)
+		setprop monospace-font-name "$value"
+		;;
+	gtk-xft-antialias)
+		setprop font-antialiasing "${ANTIALIASING_ENUM[$value]}"
+		;;
+	gtk-xft-hinting)
+		if [[ "$value" == 1 ]]; then
+			SETHINT=1
+		fi
+		;;
+	gtk-xft-hintstyle)
+		if [[ "$SETHINT" == 1 ]]; then
+			setprop font-hinting "${value//hint/}"
+		fi
+		;;
+	gtk-xft-rgba)
+		if [[ "$value" == "none" ]]; then
+			setprop font-rgba-order "rgba"
+		else
+			setprop font-rgba-order "$value"
+		fi
+		;;
+	*)
+		echo "Ignoring '$key'" >&2
+		;;
+	esac
+done < ${XDG_CONFIG_HOME:-$HOME/.config}/gtk-3.0/settings.ini

@@ -1,11 +1,15 @@
 # Read `man 5 sway` for a complete reference.
 
 ### Variables
+set $cl_high #b4befe
+set $cl_indi #9399b2
+set $cl_back #1e1e2e
+set $cl_fore #cdd6f4
+set $cl_urge #f38ba8
 
 set $mod Mod1
 set $term alacritty
-set $menu dmenu_path | dmenu -fn 'Hack:size=11' | xargs swaymsg exec --
-#set $menu wofi --show run | xargs swaymsg exec --
+set $menu dmenu_path | dmenu -fn 'Hack:size=11' -h 24 -nb \\$cl_back -nf \\$cl_fore -sb \\$cl_high -sf \\$cl_back | xargs swaymsg exec --
 set $desktop_menu wofi -Ddrun-print_command=true --show drun | xargs swaymsg exec --
 swaynag_command swaynagmode
 
@@ -34,26 +38,30 @@ mode "nag" {
 
 ### Output configuration
 
-# My monitor is funky, freesync makes it weird
-output DP-1 mode 1920x1080@120Hz adaptive_sync disabled bg ~/Desktop/tales-of-LMC/part\ 1/background.png stretch
-
 # Lock screen after 5 minutes
 exec swayidle -w timeout 300 'swaylock -f -c 000000'
 
 ### Input configuration
 
-input * {
-    xkb_layout "tr,us,us"
-    xkb_variant ",workman,"
-    accel_profile flat
-    middle_emulation disabled
-}
 input "1133:49298:Logitech_G203_LIGHTSYNC_Gaming_Mouse" {
     pointer_accel -0.6
 }
 input "1133:16418:Logitech_Wireless_Mouse_PID:4022" {
     pointer_accel 0.1
 }
+input "*" {
+    accel_profile flat
+    middle_emulation disabled
+    xkb_layout tr
+}
+# workaround
+exec_always sleep 0.5; swaymsg input "*" xkb_layout tr
+exec_always sleep 1; swaymsg input "*" xkb_layout tr
+exec_always sleep 2; swaymsg input "*" xkb_layout tr
+exec_always sleep 4; swaymsg input "*" xkb_layout tr
+exec_always sleep 8; swaymsg input "*" xkb_layout tr
+exec_always sleep 16; swaymsg input "*" xkb_layout tr
+
 ### Key bindings
 
 # Terminal
@@ -137,12 +145,19 @@ bindsym $mod+r mode "resize"
 seat seat0 xcursor_theme troll 48
 
 # Borders
-default_border pixel 1
+default_border pixel 2
 default_floating_border normal 2
+
+# Colors                border   bg       text     indi     childborder
+client.focused          $cl_high $cl_high $cl_back $cl_indi $cl_high
+client.focused_inactive $cl_back $cl_back $cl_fore $cl_back $cl_back
+client.unfocused        $cl_back $cl_back $cl_fore $cl_back $cl_back
+client.urgent           $cl_urge $cl_urge $cl_fore $cl_urge $cl_urge
+
 #client.<class>         <border>  <background> <text> 
-client.focused          "#005577" "#005577"    "#eeeeee"
-client.focused_inactive "#444444" "#222222"    "#bbbbbb"
-client.unfocused        "#444444" "#222222"    "#bbbbbb"
+#client.focused          "#005577" "#005577"    "#eeeeee"
+#client.focused_inactive "#444444" "#222222"    "#bbbbbb"
+#client.unfocused        "#444444" "#222222"    "#bbbbbb"
 
 ### Environment (https://gitlab.com/alifurkany/sway)
 
@@ -159,7 +174,7 @@ env XDG_SESSION_DESKTOP sway
 # Service bs
 exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 exec systemctl --user start sway-session.target
-exec /usr/lib/polkit-kde-authentication-agent-1
+exec /usr/bin/lxqt-policykit-agent
 
 # Autostart
 exec dex -ae $DESKTOP_SESSION -s "${XDG_CONFIG_HOME:-$HOME/.config}/autostart"
@@ -171,7 +186,7 @@ exec waybar
 # Something something wine fix
 exec_always xrandr --output $(xrandr | grep -m 1 XWAYLAND | awk '{print $1;}') --primary
 # Apply gtk settings to gsettings
-#exec_always import-gsettings
+exec_always ~/.local/bin/import-gsettings
 
 ### Extra binds
 
@@ -194,8 +209,7 @@ bindsym Shift+Print exec ~/.local/bin/screenshot.sh window
 # Other
 bindsym Mod4+L exec swaylock -f -c 000000
 bindsym Mod4+Shift+L exec swaylock -f -c 000000 && systemctl hybrid-sleep
-bindsym --locked Mod4+Shift+L exec systemctl hybrid-sleep
-bindsym Mod1+KP_Enter exec ~/.local/share/obs-savereplay/save.sh
+bindsym --locked Mod4+Shift+L exec systemctl suspend
 
 # No keybind mode
 mode "nokeys" {
@@ -204,3 +218,4 @@ mode "nokeys" {
 bindsym $mod+Escape mode "nokeys"
 
 include /etc/sway/config.d/*
+
