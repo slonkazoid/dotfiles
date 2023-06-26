@@ -12,6 +12,8 @@ Laptop dotfiles
 - dmenu
 - wofi
 
+![Image](https://cdn.discordapp.com/attachments/1022481644633997373/1122898146406707321/Screenshot_20230626_172231.png)
+
 ### Credits
 
 - [Catppuccin](https://github.com/catppuccin)
