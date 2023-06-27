@@ -9,6 +9,7 @@
 window#waybar {
 	background-color: #1e1e2e /*nb*/;
 	color: #cdd6f4 /*nf*/;
+	opacity: 0.85;
 }
 
 .modules-left,
@@ -19,6 +20,7 @@ window#waybar {
 #workspaces button {
 	padding: 0px 5.5pt 0px 5.5pt;
 	min-width: 1px;
+	color: #cdd6f4 /*nf*/;	
 }
 
 #workspaces button.focused {

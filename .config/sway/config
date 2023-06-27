@@ -38,6 +38,8 @@ mode "nag" {
 
 ### Output configuration
 
+output DP-1 mode 1920x1080@120Hz adaptive_sync disabled bg ~/Desktop/tales-of-LMC/part\ 1/background.png stretch
+
 # Lock screen after 5 minutes
 exec swayidle -w timeout 300 'swaylock -f -c 000000'
 
@@ -54,13 +56,6 @@ input "*" {
     middle_emulation disabled
     xkb_layout tr
 }
-# workaround
-exec_always sleep 0.5; swaymsg input "*" xkb_layout tr
-exec_always sleep 1; swaymsg input "*" xkb_layout tr
-exec_always sleep 2; swaymsg input "*" xkb_layout tr
-exec_always sleep 4; swaymsg input "*" xkb_layout tr
-exec_always sleep 8; swaymsg input "*" xkb_layout tr
-exec_always sleep 16; swaymsg input "*" xkb_layout tr
 
 ### Key bindings
 
@@ -210,6 +205,7 @@ bindsym Shift+Print exec ~/.local/bin/screenshot.sh window
 bindsym Mod4+L exec swaylock -f -c 000000
 bindsym Mod4+Shift+L exec swaylock -f -c 000000 && systemctl hybrid-sleep
 bindsym --locked Mod4+Shift+L exec systemctl suspend
+bindsym Mod1+KP_Enter exec ~/.local/share/obs-savereplay/save.sh
 
 # No keybind mode
 mode "nokeys" {
@@ -218,4 +214,3 @@ mode "nokeys" {
 bindsym $mod+Escape mode "nokeys"
 
 include /etc/sway/config.d/*
-

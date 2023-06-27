@@ -9,8 +9,6 @@
 	"modules-right": [
 		"cpu",
 		"memory",
-		"backlight",
-		"battery",
 		"network",
 		"pulseaudio",
 		"custom/mic",
@@ -34,21 +32,6 @@
 	"memory": {
 		"format": "󰍛 {percentage}%",
 		"interval": 1
-	},
-	"backlight": {
-		"format": "󰛨 {percent}%",
-		"on-scroll-up": "light -A 5",
-		"on-scroll-down": "light -U 5",
-		"interval": 5
-	},
-	"battery": {
-		"format": "{icon} {capacity}%",
-		"format-icons": ["󰁻", "󰁽", "󰁿", "󰂁", "󰁹"],
-		"format-time": "{H}h {M}m",
-		"tooltip-format": "{time} left",
-		"on-scroll-up": "light -A 5",
-		"on-scroll-down": "light -U 5",
-		"interval": 5
 	},
 	"network": {
 		"format-ethernet": "󰈀 Connected",
