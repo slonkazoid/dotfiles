@@ -1,6 +1,6 @@
 # dotfiles
 
-Laptop dotfiles
+Alternative dotfiles
 
 - Catppuccin-mocha colorscheme
 - dwm bindings
@@ -11,8 +11,9 @@ Laptop dotfiles
 - Swaync
 - dmenu
 - wofi
+- xdg-desktop-portal-wlr
 
-![Image](https://cdn.discordapp.com/attachments/1022481644633997373/1122898146406707321/Screenshot_20230626_172231.png)
+![Image](https://cdn.discordapp.com/attachments/1022481644633997373/1124052096740765878/image.png)
 
 ### Credits
 
@@ -24,6 +25,8 @@ Laptop dotfiles
 
 This project requires a patched sway version, you can install my patches with the AUR package `sway-afy-git`, or you can patch it yourself.  
 [Patches](https://gitlab.com/alifurkany/sway-patches)
+
+This project also requires you to patch dmenu with the [line height patch](https://tools.suckless.org/dmenu/patches/line-height/).
 
 - catppuccin-gtk-theme-mocha
 - dex
@@ -44,7 +47,7 @@ This project requires a patched sway version, you can install my patches with th
 - qt6ct
 - slurp
 - sway
-- sway-systemd-git
+- sway-systemd
 - swayidle
 - swaylock
 - swaynagmode
@@ -58,3 +61,9 @@ This project requires a patched sway version, you can install my patches with th
 - xdg-desktop-portal-wlr
 - xdg-user-dirs
 - xrandr
+
+Note: The -git version of `sway-systemd` has weird autostart functionality by default.
+
+Note: You need to configure `.config/xdg-desktop-portal-wlr/config` for your setup.
+
+Note: The project `obs-savereplay` is not included in this repository. You need to write it yourself if you want to use it.
