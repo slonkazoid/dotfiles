@@ -9,6 +9,8 @@
 	"modules-right": [
 		"cpu",
 		"memory",
+		"backlight",
+		"battery",
 		"network",
 		"pulseaudio",
 		"custom/mic",
@@ -32,6 +34,21 @@
 	"memory": {
 		"format": "󰍛 {percentage}%",
 		"interval": 1
+	},
+	"backlight": {
+		"format": "󰛨 {percent}%",
+		"on-scroll-up": "light -A 5",
+		"on-scroll-down": "light -U 5",
+		"interval": 5
+	},
+	"battery": {
+		"format": "{icon} {capacity}%",
+		"format-icons": ["󰁻", "󰁽", "󰁿", "󰂁", "󰁹"],
+		"format-time": "{H}h {M}m",
+		"tooltip-format": "{time} left",
+		"on-scroll-up": "light -A 5",
+		"on-scroll-down": "light -U 5",
+		"interval": 5
 	},
 	"network": {
 		"format-ethernet": "󰈀 Connected",
@@ -57,12 +74,14 @@
 	},
 	"custom/mic": {
 		"format": "{}",
-		"exec": "pactl get-source-mute @DEFAULT_SOURCE@ | sed 's/Mute: //;s/yes//;s/no//'",
-		"exec-if": "sleep 0.1",
+		"exec": "~/.local/bin/mic.sh",
 		"exec-on-event": true,
 		"tooltip": false,
 		"interval": 1,
-		"on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
+		"on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
+		"on-scroll-up": "pactl set-source-volume @DEFAULT_SOURCE@ +5%",
+		"on-scroll-down": "pactl set-source-volume @DEFAULT_SOURCE@ -5%",
+		"on-click-middle": "pavucontrol-qt"
 	},
 	"clock": {
 		"format": "{:%Y-%m-%d %H:%M:%S}",
@@ -71,5 +90,5 @@
 	"tray": {
 		"icon-size": 18,
 		"spacing": 5
-	},
+	}
 }
