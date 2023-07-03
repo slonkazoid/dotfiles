@@ -201,6 +201,9 @@ bindsym Print exec ~/.local/bin/screenshot.sh
 bindsym Ctrl+Print exec ~/.local/bin/screenshot.sh area
 bindsym Shift+Print exec ~/.local/bin/screenshot.sh window
 
+# Notification center
+bindsym $mod+KP_Add exec swaync-client -t
+
 # Other
 bindsym Mod4+L exec swaylock -f -c 000000
 bindsym Mod4+Shift+L exec swaylock -f -c 000000 && systemctl hybrid-sleep
