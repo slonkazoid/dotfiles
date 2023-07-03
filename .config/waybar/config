@@ -43,7 +43,9 @@
 	},
 	"battery": {
 		"format": "{icon} {capacity}%",
-		"format-icons": ["󰁻", "󰁽", "󰁿", "󰂁", "󰁹"],
+		"format-full": "󰁹 Full",
+		"format-charging": "󰂄 {capacity}%",
+		"format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂"],
 		"format-time": "{H}h {M}m",
 		"tooltip-format": "{time} left",
 		"on-scroll-up": "light -A 5",
