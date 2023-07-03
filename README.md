@@ -15,13 +15,13 @@ Alternative dotfiles
 
 ![Image](https://cdn.discordapp.com/attachments/1022481644633997373/1124052096740765878/image.png)
 
-### Credits
+## Credits
 
 - [Catppuccin](https://github.com/catppuccin)
 - [baolhq - Catppuccin Sway](https://github.com/baolhq/catppuccin-sway)
 - [chaibronz' waybar config](https://github.com/chaibronz/waybar_conf)
 
-### Dependencies
+## Dependencies
 
 This project requires a patched sway version, you can install my patches with the AUR package `sway-afy-git`, or you can patch it yourself.  
 [Patches](https://gitlab.com/alifurkany/sway-patches)
@@ -36,17 +36,17 @@ This project also requires you to patch dmenu with the [line height patch](https
 - kvantum
 - kvantum-theme-catppuccin-git
 - libpulse
-- light
 - lxqt-policykit-agent
 - networkmanager
 - notify-send
+- pavucontrol-qt
 - pipewire
 - pipewire-pulse
 - playerctl
 - qt5ct
 - qt6ct
 - slurp
-- sway
+- sway-afy-git
 - sway-systemd
 - swayidle
 - swaylock
@@ -61,6 +61,15 @@ This project also requires you to patch dmenu with the [line height patch](https
 - xdg-desktop-portal-wlr
 - xdg-user-dirs
 - xrandr
+
+### Optional dependencies
+
+Without the dependencies above, stuff may break but these ones are not required.
+
+- light (For backlight control)
+- pamixer (Getting microphone volume)
+
+## Notes
 
 Note: The -git version of `sway-systemd` has weird autostart functionality by default.
 
