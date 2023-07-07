@@ -49,6 +49,7 @@ window#waybar.empty #window {
 	padding: 0px 5.5pt 0px 5.5pt;
 }
 
+#temperature,
 #cpu,
 #memory,
 #backlight,

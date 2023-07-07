@@ -7,6 +7,7 @@
 		"sway/window"
 	],
 	"modules-right": [
+		"temperature",
 		"cpu",
 		"memory",
 		"backlight",
@@ -26,6 +27,19 @@
 		"format": "{}",
 		"max-length": 150,
 		"max-height": 20,
+	},
+	"temperature": {
+		"critical-threshold": 95,
+		"interval": 1,
+		"hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+		"format": "{icon} {temperatureC}°",
+		"format-icons": [
+			"",
+			"",
+			"",
+			"",
+			""
+		]
 	},
 	"cpu": {
 		"format": "󰻠 {usage}%",
