@@ -37,7 +37,7 @@ This project also requires you to patch dmenu with the [line height patch](https
 - kvantum-theme-catppuccin-git
 - libnotify
 - libpulse
-- lxqt-policykit-agent
+- lxqt-policykit
 - networkmanager
 - pavucontrol-qt
 - pipewire
@@ -53,6 +53,8 @@ This project also requires you to patch dmenu with the [line height patch](https
 - swaynagmode
 - swaync
 - systemd
+- ttf-hack
+- ttf-hack-nerd
 - waybar
 - wireplumber
 - wl-clipboard
