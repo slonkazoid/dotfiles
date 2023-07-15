@@ -35,10 +35,10 @@ This project also requires you to patch dmenu with the [line height patch](https
 - grim
 - kvantum
 - kvantum-theme-catppuccin-git
+- libnotify
 - libpulse
 - lxqt-policykit-agent
 - networkmanager
-- notify-send
 - pavucontrol-qt
 - pipewire
 - pipewire-pulse
@@ -60,7 +60,7 @@ This project also requires you to patch dmenu with the [line height patch](https
 - xdg-desktop-portal
 - xdg-desktop-portal-wlr
 - xdg-user-dirs
-- xrandr
+- xorg-xrandr
 
 ### Optional dependencies
 
