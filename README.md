@@ -13,7 +13,7 @@ Alternative dotfiles
 - wofi
 - xdg-desktop-portal-wlr
 
-![Image](https://cdn.discordapp.com/attachments/1022481644633997373/1124052096740765878/image.png)
+![Image](https://cdn.discordapp.com/attachments/1022481644633997373/1133893874771824660/Screenshot_20230727_012740.png)
 
 ## Credits
 
