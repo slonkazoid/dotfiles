@@ -23,14 +23,11 @@ Alternative dotfiles
 
 ## Dependencies
 
-This project requires a patched sway version, you can install my patches with the AUR package `sway-afy-git`, or you can patch it yourself.  
-[Patches](https://gitlab.com/alifurkany/sway-patches)
-
-This project also requires you to patch dmenu with the [line height patch](https://tools.suckless.org/dmenu/patches/line-height/).
+This project requires you to install patched versions of sway and dmenu. You can find them in the list below.
 
 - catppuccin-gtk-theme-mocha
 - dex
-- dmenu
+- [dmenu](https://gitlab.com/slonkazoid/pkgbuild-dmenu-patched)
 - glib2
 - grim
 - kvantum
@@ -46,7 +43,7 @@ This project also requires you to patch dmenu with the [line height patch](https
 - qt5ct
 - qt6ct
 - slurp
-- sway-afy-git
+- [sway-afy-git](https://gitlab.com/slonkazoid/pkgbuild-sway-afy-git)
 - sway-systemd
 - swayidle
 - swaylock
@@ -72,8 +69,6 @@ Without the dependencies above, stuff may break but these ones are not required.
 - pamixer (Getting microphone volume)
 
 ## Notes
-
-Note: The -git version of `sway-systemd` has weird autostart functionality by default.
 
 Note: You need to configure `.config/xdg-desktop-portal-wlr/config` for your setup.
 
