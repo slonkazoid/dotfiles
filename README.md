@@ -43,7 +43,7 @@ This project requires you to install patched versions of sway and dmenu. You can
 - qt5ct
 - qt6ct
 - slurp
-- [sway-afy-git](https://gitlab.com/slonkazoid/pkgbuild-sway-afy-git)
+- [sway-slonk-git](https://gitlab.com/slonkazoid/pkgbuild-sway-slonk-git)
 - sway-systemd
 - swayidle
 - swaylock
