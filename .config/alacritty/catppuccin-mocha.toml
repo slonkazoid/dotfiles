@@ -6,7 +6,7 @@ bright_foreground = "#CDD6F4"
 
 [colors.cursor]
 text = "#1E1E2E"
-cursor = "#F5E0DC"
+cursor = "#F5C2E7"
 
 [colors.vi_mode_cursor]
 text = "#1E1E2E"
@@ -34,7 +34,7 @@ background = "#A6ADC8"
 
 [colors.selection]
 text = "#1E1E2E"
-background = "#F5E0DC"
+background = "#F5C2E7"
 
 [colors.normal]
 black = "#45475A"
@@ -72,4 +72,4 @@ color = "#FAB387"
 
 [[colors.indexed_colors]]
 index = 17
-color = "#F5E0DC"
+color = "#F5C2E7"
