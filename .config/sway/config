@@ -61,6 +61,7 @@ input type:pointer {
     middle_emulation disabled
 }
 input type:touchpad {
+    dwt disabled
     tap enabled
     middle_emulation enabled
 }
