@@ -52,10 +52,17 @@ input "1133:49298:Logitech_G203_LIGHTSYNC_Gaming_Mouse" {
 input "1133:16418:Logitech_Wireless_Mouse_PID:4022" {
     pointer_accel 0.1
 }
-input "*" {
+
+input type:keyboard {
+    xkb_layout tr
+}
+input type:pointer {
     accel_profile flat
     middle_emulation disabled
-    xkb_layout tr
+}
+input type:touchpad {
+    tap enabled
+    middle_emulation enabled
 }
 
 ### Key bindings
