@@ -210,6 +210,10 @@ bindsym Print exec ~/.local/bin/screenshot.sh
 bindsym Ctrl+Print exec ~/.local/bin/screenshot.sh area
 bindsym Shift+Print exec ~/.local/bin/screenshot.sh window
 
+# Screen recording
+bindsym $mod+Home exec ~/.local/bin/record.sh
+bindsym $mod+End exec killall -s SIGINT wf-recorder
+
 # Notifications
 bindsym $mod+n exec swaync-client -t
 bindsym $mod+Shift+n exec swaync-client -C
