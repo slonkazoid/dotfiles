@@ -163,7 +163,7 @@ client.urgent           $cl_urge $cl_urge $cl_fore $cl_urge $cl_urge
 #client.focused_inactive "#444444" "#222222"    "#bbbbbb"
 #client.unfocused        "#444444" "#222222"    "#bbbbbb"
 
-### Environment (https://gitlab.com/alifurkany/sway)
+### Environment (https://gitlab.com/slonkazoid/pkgbuild-sway-slonk-git)
 
 env GDK_BACKEND wayland
 env QT_WAYLAND_DISABLE_WINDOWDECORATION 1
@@ -172,6 +172,7 @@ env _JAVA_AWT_WM_NONREPARENTING 1
 env XDG_CURRENT_DESKTOP sway
 env DESKTOP_SESSION sway
 env XDG_SESSION_DESKTOP sway
+env MOZ_ENABLE_WAYLAND 1
 
 ### Exec stuff
 
