@@ -209,6 +209,7 @@ bindsym --locked XF86AudioPrev exec playerctl previous
 # Screenshot
 bindsym Print exec ~/.local/bin/screenshot.sh
 bindsym Ctrl+Print exec ~/.local/bin/screenshot.sh area
+bindsym Ctrl+Shift+Print exec ~/.local/bin/screenshot.sh freeze
 bindsym Shift+Print exec ~/.local/bin/screenshot.sh window
 
 # Screen recording

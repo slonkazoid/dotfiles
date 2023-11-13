@@ -60,6 +60,7 @@ Note: You need to install patched versions of sway and dmenu. You can find PKGBU
 
 - light (For backlight control)
 - pamixer (Getting microphone volume)
+- feh (For the freeze mode of screenshot.sh)
 
 ## Notes
 
