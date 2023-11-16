@@ -34,10 +34,7 @@ area)   grim -g "$(slurp)" "$screenshot_path" ;;
 window) grim -g "$(pick_window)" "$screenshot_path" ;;
 freeze) freeze ;;
 *)      grim -c "$screenshot_path" ;;
-esac || {
-    notify-send "Error while taking a screenshot"
-    exit 1
-}
+esac
 
 action="$(notify)"
 if [[ "$action" == "copy" ]]; then
