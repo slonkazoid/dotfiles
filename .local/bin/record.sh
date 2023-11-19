@@ -29,7 +29,7 @@ notify-send "Recording screen" "Recording video to '${video_path}'" &
 
 wf-recorder \
 	-x rgb24 -c libx264rgb \
-	-p crf=14 -p level=5.2 -p preset=veryfast -p profile=high444 \
+	-p crf=10 -p level=5.2 -p preset=veryfast -p profile=high444 \
 	-f "$video_path" >&2 || {
 	notify-send "Couldn't record screen" "wf-recorder exited with code $?" &
 	exit 1
