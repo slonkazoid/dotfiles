@@ -38,7 +38,7 @@ mode "nag" {
 
 ### Output configuration
 
-output DP-1 mode 1920x1080@120Hz adaptive_sync disabled
+output DP-1 mode 1920x1080@120Hz adaptive_sync disabled subpixel none
 output * bg $cl_back solid_color
 
 # Lock screen after 5 minutes
