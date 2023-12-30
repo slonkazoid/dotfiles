@@ -4,8 +4,8 @@
 
 set -e
 
-video_path="${1:-$HOME/Desktop/"$(date '+%Y-%m-%d %H-%M-%S')".mkv}"
-thumbnail_path="/tmp/thumb_$(basename "${video_path}")_$RANDOM.png"
+video_path="${1:-"$HOME/Videos/$(basename "$0")/$(date '+%Y-%m-%d %H-%M-%S').mkv"}"
+thumbnail_path="/tmp/thumb_$(basename "$video_path")_$RANDOM.png"
 
 generate_thumbnail() {
 	ffmpeg -hide_banner -i "$1" -frames:v 1 "$2" &>/dev/null
@@ -17,7 +17,7 @@ notify() {
 		thumbnail=1 ||
 		echo "error while making thumbnail" >&2
 
-	notify-send 'Video recorded' "Saved to '${video_path}'" \
+	notify-send 'Video recorded' "Saved to '$video_path'" \
 		${thumbnail:+-i "$thumbnail_path"} \
 		-a 'wf-recorder' -t 5000 -w \
 		-A "view=View" -A "delete=Delete"
@@ -27,9 +27,12 @@ notify() {
 
 notify-send "Recording screen" "Recording video to '${video_path}'" &
 
+mkdir -p "$(dirname "$video_path")"
+
 wf-recorder \
 	-x rgb24 -c libx264rgb \
 	-p crf=10 -p level=5.2 -p preset=veryfast -p profile=high444 \
+	-a \
 	-f "$video_path" >&2 || {
 	notify-send "Couldn't record screen" "wf-recorder exited with code $?" &
 	exit 1
