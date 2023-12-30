@@ -64,6 +64,8 @@ Note: You need to install patched versions of sway and dmenu. You can find PKGBU
 
 ## Notes
 
+Note: The `.config/fontconfig/fonts.conf` file is tuned for VA panels. You probably want to create a new one with qt5ct.
+
 Note: You need to configure `.config/xdg-desktop-portal-wlr/config` for your setup.
 
 Note: The project `obs-savereplay` is not included in this repository. You need to write it yourself if you want to use it.
