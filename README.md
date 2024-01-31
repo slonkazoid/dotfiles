@@ -7,4 +7,4 @@ Raspberry Pi dotfiles
 - **Mental Outlaw**
     - [GitHub](https://github.com/MentalOutlaw)
 - **Me**
-    - [GitLab](https://gitlab.com/alifurkany)
+    - [GitLab](https://gitlab.com/slonkazoid)
