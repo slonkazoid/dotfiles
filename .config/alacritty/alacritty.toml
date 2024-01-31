@@ -41,3 +41,9 @@ lines = 24
 [window.padding]
 x = 2
 y = 2
+
+[keyboard]
+bindings = [
+	{ key = "PageDown", mods = "Shift", action = "ScrollPagedown" },
+	{ key = "PageUp",   mods = "Shift", action = "ScrollPageUp" },
+]
