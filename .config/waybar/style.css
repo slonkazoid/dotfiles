@@ -30,7 +30,7 @@ window#waybar {
 #window {
 	background-color: #b4befe /*fb*/;
 	color: #1e1e2e /*ff*/;
-	padding: 0px 10px 0px 10px;
+	padding: 2px 10px 0px 10px;
 	font-size: 10pt;
 }
 

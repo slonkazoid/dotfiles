@@ -38,7 +38,8 @@
 			"",
 			"",
 			"",
-			""
+			"",
+			" CRIT!"
 		]
 	},
 	"cpu": {
@@ -47,6 +48,7 @@
 	},
 	"memory": {
 		"format": "󰍛 {percentage}%",
+		"tooltip-format": "{used:0<4} GiB used",
 		"interval": 1
 	},
 	"backlight": {
@@ -59,7 +61,7 @@
 		"format": "{icon} {capacity}%",
 		"format-full": "󰁹 Full",
 		"format-charging": "󰂄 {capacity}%",
-		"format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂"],
+		"format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "unreachable!()"],
 		"format-time": "{H}h {M}m",
 		"tooltip-format": "{time} left",
 		"on-scroll-up": "light -A 5",
@@ -67,22 +69,19 @@
 		"interval": 5
 	},
 	"network": {
-		"format-ethernet": "󰈀 Connected",
-		"format-wifi": " Connected",
-		"format-disconnected": "Disconnected",
-		"tooltip-format": "{ifname} {ipaddr}",
-		"tooltip-format-wifi": "{essid} ({signalStrength}%) {ifname} {ipaddr}",
+		"format-ethernet": "󰈀 {ifname}",
+		"format-wifi": "{icon} {ifname}",
+		"format-disconnected": "󰈂 lo",
+		"format-icons": ["󰤯", "󰤟", "󰤟", "󰤥", "󰤥", "󰤨"],
+		"tooltip-format": "{ifname} {ipaddr} {bandwidthDownBytes} {bandwidthUpBytes}",
+		"tooltip-format-wifi": "{essid} ({signalStrength}%) {ifname} {ipaddr} {bandwidthDownBytes} {bandwidthUpBytes}",
 		"interval": 10
 	},
 	"pulseaudio": {
 		"format": "{icon} {volume}%",
 		"format-muted": "󰝟 Mute",
+		"format-icons": {"default": [""]},
 		"interval": 1,
-		"format-icons": {
-			"default": [
-				""
-			]
-		},
 		"on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
 		"on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
 		"on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
