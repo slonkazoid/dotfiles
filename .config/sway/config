@@ -221,6 +221,7 @@ bindsym $mod+n exec swaync-client -t
 bindsym $mod+Shift+n exec swaync-client -C
 
 # Other
+bindsym $mod+k exec kolourpaint.sh
 bindsym Mod4+L exec swaylock -f -c 000000
 bindsym Mod4+Shift+L exec swaylock -f -c 000000 && systemctl hybrid-sleep
 bindsym --locked Mod4+Shift+L exec systemctl suspend
