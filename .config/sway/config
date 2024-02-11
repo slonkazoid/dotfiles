@@ -225,7 +225,7 @@ bindsym $mod+k exec kolourpaint.sh
 bindsym Mod4+L exec swaylock -f -c 000000
 bindsym Mod4+Shift+L exec swaylock -f -c 000000 && systemctl hybrid-sleep
 bindsym --locked Mod4+Shift+L exec systemctl suspend
-bindsym Mod1+KP_Enter exec ~/.local/share/obs-savereplay/save.sh
+bindsym Mod1+KP_Enter exec obs-savereplay
 
 # No keybind mode
 mode "nokeys" {
