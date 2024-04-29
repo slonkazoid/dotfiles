@@ -46,4 +46,5 @@ y = 2
 bindings = [
 	{ key = "PageDown", mods = "Shift", action = "ScrollPagedown" },
 	{ key = "PageUp",   mods = "Shift", action = "ScrollPageUp" },
+	{ key = "Return",   mods = "Alt",     action = "CreateNewWindow" },
 ]
