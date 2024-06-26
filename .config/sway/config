@@ -54,7 +54,7 @@ input "1133:16418:Logitech_Wireless_Mouse_PID:4022" {
 }
 
 input type:keyboard {
-    xkb_layout tr
+    xkb_layout us
 }
 input type:pointer {
     accel_profile flat
