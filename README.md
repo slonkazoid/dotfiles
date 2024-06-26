@@ -11,7 +11,7 @@ My dotfiles
 - dmenu
 - wofi
 
-![Image](https://cdn.discordapp.com/attachments/1022481644633997373/1133893874771824660/Screenshot_20230727_012740.png)
+![picture of a sway catppuccin rice, neovim and neofetch are open, and the OS is arch linux](https://files.slonk.ing/WvOHjgQp.Screenshot_20240627_012345.png)
 
 ## Credits
 
