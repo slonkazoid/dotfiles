@@ -38,6 +38,7 @@ mode "nag" {
 
 ### Output configuration
 
+output "Beihai Century Joint Innovation Technology Co.,Ltd GB-2461CF             " mode 1920x1080@144Hz adaptive_sync off
 output * bg $cl_back solid_color
 
 # Lock screen after 5 minutes
