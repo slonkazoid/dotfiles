@@ -33,20 +33,18 @@ Note: You need to install patched versions of sway and dmenu. You can find PKGBU
 - libpulse
 - lxqt-policykit
 - networkmanager
-- pavucontrol-qt
+- pavucontrol
 - pipewire
 - pipewire-pulse
 - playerctl
 - qt5ct
 - slurp
 - [sway-slonk-git](https://gitlab.com/slonkazoid/pkgbuild-sway-slonk-git)
-- sway-systemd
 - swayidle
 - swaylock
-- swaynagmode
 - swaync
 - systemd
-- ttf-hack-nerd
+- ttf-hack
 - waybar
 - wireplumber
 - wl-clipboard
@@ -55,6 +53,11 @@ Note: You need to install patched versions of sway and dmenu. You can find PKGBU
 - xdg-desktop-portal-wlr
 - xdg-user-dirs
 - xorg-xrandr
+
+### AUR dependencies
+
+- sway-systemd
+- swaynagmode
 
 ### Optional dependencies
 

@@ -10,7 +10,7 @@ set $cl_urge #f38ba8
 set $mod Mod1
 set $term alacritty
 set $menu dmenu_path | dmenu -fn 'Hack:size=11' -h 24 -nb \\$cl_back -nf \\$cl_fore -sb \\$cl_high -sf \\$cl_back | xargs swaymsg exec --
-set $desktop_menu wofi -Ddrun-print_command=true --show drun | xargs swaymsg exec --
+set $desktop_menu wofi -i -Ddrun-print_command=true --show drun | xargs swaymsg exec --
 swaynag_command swaynagmode
 
 # Keyboard controls in swaynag
@@ -166,7 +166,7 @@ client.urgent           $cl_urge $cl_urge $cl_fore $cl_urge $cl_urge
 
 env GDK_BACKEND wayland
 env QT_WAYLAND_DISABLE_WINDOWDECORATION 1
-env QT_QPA_PLATFORMTHEME qt5ct
+#env QT_QPA_PLATFORMTHEME qt5ct
 env _JAVA_AWT_WM_NONREPARENTING 1
 #env XDG_CURRENT_DESKTOP sway # not needed with sway-systemd
 env DESKTOP_SESSION sway
