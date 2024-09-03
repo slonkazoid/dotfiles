@@ -11,7 +11,7 @@ My dotfiles
 - dmenu
 - wofi
 
-![picture of a sway catppuccin rice, neovim and neofetch are open, and the OS is arch linux](https://files.slonk.ing/WvOHjgQp.Screenshot_20240627_012345.png)
+![picture of a sway catppuccin rice. several terminal windows open, featuring neovim, neofetch, git, w3m, and such. the OS is arch linux](https://files.slonk.ing/1mPvlELB.Screenshot_20240903_192112.png)
 
 ## Credits
 
