@@ -1,4 +1,5 @@
 import = ["~/.config/alacritty/catppuccin-mocha.toml"]
+#import = ["~/.config/alacritty/catppuccin-latte.toml"]
 
 [env]
 TERM = "xterm-256color"
@@ -7,19 +8,19 @@ TERM = "xterm-256color"
 size = 10
 
 [font.bold]
-family = "Hack Nerd Font"
+family = "Hack"
 style = "Bold"
 
 [font.bold_italic]
-family = "Hack Nerd Font"
+family = "Hack"
 style = "Bold Italic"
 
 [font.italic]
-family = "Hack Nerd Font"
+family = "Hack"
 style = "Italic"
 
 [font.normal]
-family = "Hack Nerd Font"
+family = "Hack"
 style = "Regular"
 
 [scrolling]
@@ -31,7 +32,8 @@ save_to_clipboard = true
 
 [window]
 dynamic_title = false
-opacity = 0.85
+#opacity = 0.85
+opacity = 1
 title = "hey"
 
 [window.dimensions]
@@ -46,5 +48,5 @@ y = 2
 bindings = [
 	{ key = "PageDown", mods = "Shift", action = "ScrollPagedown" },
 	{ key = "PageUp",   mods = "Shift", action = "ScrollPageUp" },
-	{ key = "Return",   mods = "Alt",   action = "CreateNewWindow" },
+	{ key = "Return",   mods = "Alt",     action = "CreateNewWindow" },
 ]

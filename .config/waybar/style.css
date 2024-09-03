@@ -2,7 +2,7 @@
 	border: none;
 	border-radius: 0;
 	transition: none; /* Disable predefined animations */
-	font-family: "Hack Nerd Font", "Hack", monospace;
+	font-family: "Hack", monospace;
 	font-size: 11pt;
 }
 

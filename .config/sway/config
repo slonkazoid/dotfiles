@@ -9,7 +9,7 @@ set $cl_urge #f38ba8
 
 set $mod Mod1
 set $term alacritty
-set $menu dmenu_path | dmenu -fn 'Hack Nerd Font:size=11' -h 24 -nb \\$cl_back -nf \\$cl_fore -sb \\$cl_high -sf \\$cl_back | xargs swaymsg exec --
+set $menu dmenu_path | dmenu -fn 'Hack:size=11' -h 24 -nb \\$cl_back -nf \\$cl_fore -sb \\$cl_high -sf \\$cl_back | xargs swaymsg exec --
 set $desktop_menu wofi -Ddrun-print_command=true --show drun | xargs swaymsg exec --
 swaynag_command swaynagmode
 
@@ -38,7 +38,6 @@ mode "nag" {
 
 ### Output configuration
 
-output DP-1 mode 1920x1080@120Hz adaptive_sync disabled subpixel none
 output * bg $cl_back solid_color
 
 # Lock screen after 5 minutes
@@ -169,7 +168,7 @@ env GDK_BACKEND wayland
 env QT_WAYLAND_DISABLE_WINDOWDECORATION 1
 env QT_QPA_PLATFORMTHEME qt5ct
 env _JAVA_AWT_WM_NONREPARENTING 1
-env XDG_CURRENT_DESKTOP sway
+#env XDG_CURRENT_DESKTOP sway # not needed with sway-systemd
 env DESKTOP_SESSION sway
 env XDG_SESSION_DESKTOP sway
 env MOZ_ENABLE_WAYLAND 1
@@ -223,9 +222,9 @@ bindsym $mod+Shift+n exec swaync-client -C
 # Other
 bindsym $mod+k exec ~/.local/bin/kolourpaint.sh
 bindsym Mod4+L exec swaylock -f -c 000000
-bindsym Mod4+Shift+L exec swaylock -f -c 000000 && systemctl hybrid-sleep
+bindsym Mod4+Shift+L exec swaylock -f -c 000000 && systemctl sleep
 bindsym --locked Mod4+Shift+L exec systemctl suspend
-bindsym Mod1+KP_Enter exec ~/.local/bin/obs-savereplay
+#bindsym Mod1+KP_Enter exec ~/.local/bin/obs-savereplay
 
 # No keybind mode
 mode "nokeys" {
