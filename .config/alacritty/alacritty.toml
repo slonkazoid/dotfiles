@@ -1,5 +1,7 @@
-import = ["~/.config/alacritty/catppuccin-mocha.toml"]
-#import = ["~/.config/alacritty/catppuccin-latte.toml"]
+general.import = [
+	"~/.config/alacritty/catppuccin-mocha.toml",
+	#"~/.config/alacritty/catppuccin-latte.toml"
+]
 
 [env]
 TERM = "xterm-256color"
