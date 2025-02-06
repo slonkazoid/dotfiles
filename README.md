@@ -49,6 +49,7 @@ Note: You need to install patched versions of sway and dmenu. You can find PKGBU
 - wireplumber
 - wl-clipboard
 - wofi
+- wpctl
 - xdg-desktop-portal
 - xdg-desktop-portal-wlr
 - xdg-user-dirs
@@ -62,7 +63,6 @@ Note: You need to install patched versions of sway and dmenu. You can find PKGBU
 ### Optional dependencies
 
 - light (For backlight control)
-- pamixer (Getting microphone volume)
 - feh (For the freeze mode of screenshot.sh)
 - kolourpaint (For kolourpaint.sh)
 

@@ -1,17 +1,7 @@
 #!/usr/bin/env bash
 
-OUTPUT=
-
 if [[ "$(pactl get-source-mute @DEFAULT_SOURCE@)" == "Mute: yes" ]]; then
-	OUTPUT=
+	echo  Mute
+else
+	echo  "$(wpctl get-volume @DEFAULT_SOURCE@ | cut -f2 -d' ' | jq -r '. * 100')"%
 fi
-
-if command -v pamixer >/dev/null; then
-	if [[ "$OUTPUT" == "" ]]; then
-		OUTPUT+=" $(pamixer --default-source --get-volume)%"
-	else
-		OUTPUT+=" Mute"
-	fi
-fi
-
-echo "$OUTPUT"
