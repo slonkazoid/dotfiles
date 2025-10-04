@@ -75,7 +75,8 @@
 		"format-icons": ["󰤯", "󰤟", "󰤟", "󰤥", "󰤥", "󰤨"],
 		"tooltip-format": "{ifname} {ipaddr} {bandwidthDownBytes} {bandwidthUpBytes}",
 		"tooltip-format-wifi": "{essid} ({signalStrength}%) {ifname} {ipaddr} {bandwidthDownBytes} {bandwidthUpBytes}",
-		"interval": 10
+		"interval": 10,
+		"on-click": "nm-connection-editor"
 	},
 	"pulseaudio": {
 		"format": "{icon} {volume}%",
